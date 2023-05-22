@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT js buổi 15</title>
+</head>
+<body>
+    <div>
+        <h2>Quản lý tuyển sinh</h2>
+    <form id="tuyenSinForm">
+      <label for="diemChuan">Điểm chuẩn của hội đồng:</label>
+      <input type="number" id="diemChuan" required><br><br>
+  
+      <label for="diemMon1">Điểm môn 1:</label>
+      <input type="number" id="diemMon1" required><br><br>
+  
+      <label for="diemMon2">Điểm môn 2:</label>
+      <input type="number" id="diemMon2" required><br><br>
+  
+      <label for="diemMon3">Điểm môn 3:</label>
+      <input type="number" id="diemMon3" required><br><br>
+  
+      <label for="khuVuc">Khu vực ưu tiên:</label>
+      <input type="text" id="khuVuc" required><br><br>
+  
+      <label for="doiTuong">Đối tượng ưu tiên:</label>
+      <input type="number" id="doiTuong" required><br><br>
+  
+      <button type="submit">Kiểm tra</button>
+    </form>
+    <div id="result"></div>
+    </div>
+
+    <div>
+        <h2>Tính tiền điện</h2>
+        <form id="tienDienForm">
+          <label for="ten">Tên:</label>
+          <input type="text" id="ten" required><br><br>
+      
+          <label for="soKW">Số KW:</label>
+          <input type="number" id="soKW" required><br><br>
+      
+          <button type="submit">Tính tiền</button>
+        </form>
+        <div id="Tinhtien"></div>
+    </div>
+
+    <div>
+        <h2>Tính thuế thu nhập cá nhân</h2>
+    <form id="thueTNCNForm">
+    <label for="hoTen">Họ và tên:</label>
+    <input type="text" id="hoTen" required><br><br>
+
+    <label for="tongThuNhap">Tổng thu nhập năm (triệu VND):</label>
+    <input type="number" id="tongThuNhap" required><br><br>
+
+    <label for="soNguoiPhuThuoc">Số người phụ thuộc:</label>
+    <input type="number" id="soNguoiPhuThuoc" required><br><br>
+
+    <button type="submit">Tính thuế</button>
+    </form>
+
+    <div id="Tinhthue"></div>
+    </div>
+
+   <div>  
+    <h1>Tính hóa đơn cáp</h1>
+    <label for="customerType">Loại khách hàng:</label>
+    <select id="customerType" onchange="toggleConnectionField()">
+      <option value="home">Nhà dân</option>
+      <option value="business">Doanh nghiệp</option>
+    </select>
+  
+    <br><br>
+  
+    <label for="connections">Số kết nối:</label>
+    <input type="number" id="connections">
+  
+    <br><br>
+  
+    <label for="premiumChannels">Số kênh cao cấp:</label>
+    <input type="number" id="premiumChannels">
+  
+    <br><br>
+  
+    <button onclick="calculateBill()">Tính hóa đơn</button>
+  
+    <h2 id="billAmount"></h2></div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
